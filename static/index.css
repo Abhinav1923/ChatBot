@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e6cc4;
+  height: calc(100vh - 56px);
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#action {
+  position: absolute;
+  margin: 10px;
+  font-size: 15px;
+  right: 0;
+  bottom: 0;
+}
+
+/* #toggle-click {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+} */
+
+#chatbox {
+  transform: translateY(40px);
+  width: 400px;
+  min-width: 300px;
+  height: 90vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.header {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #044364;
+}
+
+#header_box {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  height: 60px;
+  width: 60px;
+}
+
+#toggle-dark {
+  /* align-self: flex-end; */
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+.chat {
+  width: 100%;
+  height: calc(100% - 130px);
+  border-top: solid 1px white;
+  border-bottom: solid 1px white;
+  padding: 15px 10px 10px 10px;
+  overflow-y: auto;
+  background-image: url("images-gifs/5b47d7c96e21100739608935987f5486.jpg");
+  /* background-color: black; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.chat::-webkit-scrollbar {
+  display: none;
+}
+
+#userInput {
+  width: 100%;
+  padding: 10px;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  border-radius: 0px 0px 10px 10px;
+  height: 60px;
+}
+
+#textInput {
+  width: 80%;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid rgb(192, 190, 190);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.fa_container {
+  width: 45px;
+  height: 40px;
+  float: right;
+  font-size: 28px;
+  /* background-color: #d3d7d8; */
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.send {
+  background-color: white;
+}
+
+#send .fa {
+  transform: translateY(20%) translateX(14%);
+  color: #0e6cc4;
+}
+#send.fa:hover {
+  color: #00688b;
+}
+#mic {
+  background-color: #d3d7d8;
+}
+
+#mic .fa {
+  transform: translateY(20%) translateX(60%);
+}
+
+.userText {
+  box-sizing: border-box;
+  float: right;
+  max-width: 70%;
+  position: relative;
+  clear: both;
+  font-family: helvetica;
+  font-size: 16px;
+  background-image: linear-gradient(#89f7fe, #66a6ff);
+  border-radius: 20px;
+  margin-bottom: 5px;
+  padding: 6px 10px;
+  word-wrap: break-word;
+  /* letter-spacing: 1px; */
+  padding: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.userText:before,
+.userText:after {
+  border-radius: 20px / 5px;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.userText:before {
+  border: 10px solid transparent;
+  bottom: 0px;
+  left: auto;
+  right: -7px;
+  z-index: -2;
+}
+
+.userText:after {
+  border: 8px solid transparent;
+  border-bottom-color: #66a6ff;
+  bottom: 1px;
+  left: auto;
+  right: -5px;
+}
+
+.botText {
+  display: table;
+  clear: both;
+  max-width: 75%;
+  position: relative;
+  font-size: 16px;
+  background-image: linear-gradient(rgb(255, 255, 255), #f2f3f5);
+  border-radius: 20px;
+  margin-bottom: 5px;
+  padding: 6px 10px;
+  /* letter-spacing: 1px; */
+}
+
+.botText:before,
+.botText:after {
+  border-radius: 20px / 5px;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.botText:before {
+  border: 10px solid transparent;
+  bottom: 0px;
+  left: -7px;
+  z-index: -2;
+}
+
+.botText:after {
+  border: 8px solid transparent;
+  border-bottom-color: #f2f3f5; /* arrow color */
+  bottom: 1px;
+  left: -5px;
+}
+
+@media (max-width: 768px) {
+  #chatbox {
+    transform: translateY(5px);
+    width: 95%;
+    min-width: 300px;
+    height: 95%;
+    align-self: center;
+  }
+
+  .box {
+    display: none;
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Chatbot" />
+    <meta name="title" property="og:title" content="Chatbot" />
+    <meta property="og:type" content="website" />
+    <meta
+      name="image"
+      property="og:image"
+      content="https://image.freepik.com/free-vector/chatbot-technology-website-template_107791-113.jpg"
+    />
+    <meta name="description" property="og:description" content="Chatbot" />
+    <meta name="author" content="Abhinav Gupta" />
+    <title>Chatbot</title>
+    <link
+      rel="shortcut icon"
+      href="https://miro.medium.com/max/512/1*kq8uNr6_Kyx8jcj3uWOKFQ.png"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/index.css" />
+    <link rel="stylesheet" href="../static/pre_loader.css" />
+    <link rel="stylesheet" href="../static/background_animation.css" />
+    <link rel="stylesheet" href="../static/header_animation.css" />
+    <script src="../static/final.js"></script>
+  </head>
+
+  <body onload="setTimeout('loading()',);">
+    <!-- =================== Pre_Loader1 ================== -->
+
+    <div id="container_loader">
+      <x>
+        <x-head></x-head>
+        <x-body></x-body>
+        <x-hand></x-hand>
+      </x>
+    </div>
+    <!-- =================== Pre_Loader2 ================== -->
+    <!-- <div id="loading">
+      <div id="container"></div>
+      <div id="load_animation">My Po..</div>
+    </div> -->
+
+    <div class="box">
+      <div class="wave -one"></div>
+      <div class="wave -two"></div>
+      <div class="wave -three"></div>
+    </div>
+
+    <!-- =================== mic ================== -->
+    <span id="action"></span>
+    <!-- ========================================== -->
+
+    <!-- ===================Toggler================ -->
+
+    <!-- <button onclick="myFunction()" id="toggle-click">Dark Mode</button> -->
+
+    <!-- =========================================== -->
+
+    <div id="chatbox">
+      <div class="header">
+        <div id="header_box">
+          <div class="s1">
+            <div class="s b sb1"></div>
+            <div class="s b sb2"></div>
+            <div class="s b sb3"></div>
+            <div class="s b sb4"></div>
+          </div>
+
+          <div class="s2">
+            <div class="s b sb5"></div>
+            <div class="s b sb6"></div>
+            <div class="s b sb7"></div>
+            <div class="s b sb8"></div>
+          </div>
+
+          <div class="bigcon">
+            <div class="big b"></div>
+          </div>
+        </div>
+        <i class="material-icons" id="toggle-dark">brightness_medium</i>
+      </div>
+      <div class="chat">
+        <p class="botText">
+          <span>Hello! I'm Po your personal assistant.</span>
+        </p>
+        <p class="botText"><span>How can I help you?</span></p>
+      </div>
+
+      <div id="userInput">
+        <input
+          id="textInput"
+          type="text"
+          name="msg"
+          spellcheck="true"
+          autocomplete="off"
+          placeholder="Text Message..."
+          onkeydown="search(this)"
+        />
+        <div class="fa_container" id="send" onclick="getBotResponse()">
+          <i class="fa fa-paper-plane"></i>
+        </div>
+        <div class="fa_container" id="mic" onclick="runSpeechRecognition()">
+          <i class="fa fas fa-microphone"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // <!-- =================== Pre_Loader1 ================== -->
+    var preloader = document.getElementById("container_loader");
+    function loading() {
+      preloader.style.display = "none";
+    }
+
+    // <!-- =================== Pre_Loader2 ================== -->
+    // var preloader = document.getElementById("loading");
+    // function loading() {
+    //   preloader.style.display = "none";
+    // }
+
+    // ==================== dark toggler =======================
+
+    jQuery(document).ready(function ($) {
+      $("#toggle-dark").on("click", function () {
+        if ($(this).attr("data-click-state") == 1) {
+          $(this).attr("data-click-state", 0);
+          $(this).css("color", "white");
+          $(".header").css("background-color", "");
+          $("#userInput").css({ "background-color": "" });
+          $(".chat").css("background-image", "");
+          $("body").css({ "background-color": "" });
+        } else {
+          $(this).attr("data-click-state", 1);
+          $(this).css("color", "white");
+          $(".header").css("background-color", "black");
+          $("#userInput").css({ "background-color": "black" });
+          $(".chat").css({
+            "background-image": "none",
+            "background-color": "rgba(12,12,12)",
+          });
+          $("body").css({ "background-color": "white" });
+        }
+      });
+    });
+  </script>
+  <script>
+    setTimeout(
+      alert(
+        "This page will not work with backend as github is static! \n The responsiveness of this page is set for my device so, it will not exactly the same in your device.\n Try to open this page in Pc!"
+      ),
+      4000
+    );
+  </script>
+</html>
