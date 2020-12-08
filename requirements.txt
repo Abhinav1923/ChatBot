@@ -5,7 +5,6 @@ nltk==3.5
 numpy==1.19.3
 pipwin==0.5.0
 PyNLPl==1.2.9
-pypiwin32==223
 pyttsx3==2.90
 PyYAML==3.13
 spacy==2.3.4
