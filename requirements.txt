@@ -8,4 +8,3 @@ PyNLPl==1.2.9
 pyttsx3==2.90
 PyYAML==3.13
 spacy==2.3.4
-pyaudio
