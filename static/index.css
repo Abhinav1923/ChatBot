@@ -219,6 +219,13 @@ body {
   left: -5px;
 }
 
+.alert {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  max-width: 350px;
+}
+
 @media (max-width: 768px) {
   #chatbox {
     transform: translateY(5px);
